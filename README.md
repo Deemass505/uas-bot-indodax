@@ -22,7 +22,7 @@ btcidr, ethidr, adaidr.
 
 ## Eksekusi simulasi
 - Beli di ask dan jual di bid dari order book live. Bila order lebih besar dari level terbaik, level berikutnya dihabiskan dan dipakai harga rata-ratanya. Tidak ada fill di mid atau close.
-- Fee: tarif taker all-in. Sumber 1, halaman resmi "Pertanyaan Mengenai Fee Transaksi Indodax" (help.indodax.com, https://help.indodax.com/hc/id/articles/...), diakses 5 Nov 2026, IDR Market mode Pro: beli 0,20555% (service 0,20% + pajak 0% + CFX 0,00555%), jual 0,41555% (service 0,20% + pajak 0,21% + CFX 0,00555%). Sumber 2, https://indodax.com/api/pairs, diakses 5 Nov 2026: `trade_fee_percent_taker` = 0,2%. Dipakai yang lebih mahal, yaitu 0,41555% untuk beli dan jual (`FEE_TAKER` = 0.0041555). Akibatnya biaya sisi beli sengaja sedikit terlalu tinggi (konservatif).
+- Fee: tarif taker all-in. Sumber 1, halaman resmi "Pertanyaan Mengenai Fee Transaksi Indodax" (help.indodax.com, https://help.indodax.com/hc/id, diakses 5 Nov 2026, IDR Market mode Pro: beli 0,20555% (service 0,20% + pajak 0% + CFX 0,00555%), jual 0,41555% (service 0,20% + pajak 0,21% + CFX 0,00555%). Sumber 2, https://indodax.com/api/pairs, diakses 5 Nov 2026: `trade_fee_percent_taker` = 0,2%. Dipakai yang lebih mahal, yaitu 0,41555% untuk beli dan jual (`FEE_TAKER` = 0.0041555). Akibatnya biaya sisi beli sengaja sedikit terlalu tinggi (konservatif).
 - Minimum order Rp25.000 (/api/pairs menyebut Rp10.000; dipakai yang lebih ketat).
 - Kuantitas dibulatkan ke bawah (QTY_DECIMALS = 8). Dicocokkan dengan /api/pairs pada 5 Nov 2026: quantity_increment = 1e-8 untuk btcidr, ethidr, dan adaidr.
 - Equity: posisi terbuka dinilai di best bid. Equity harian dicatat pada panggilan pertama setelah 00.00 WIB.
