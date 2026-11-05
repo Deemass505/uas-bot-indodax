@@ -11,7 +11,7 @@ ENTRY_N = 20                   # masuk: close > high tertinggi 20 bar sebelumnya
 EXIT_K = 10                    # keluar: close < low terendah 10 bar sebelumnya
 SMA_M = 100                    # filter: close > SMA 100 (keluar juga bila di bawah SMA)
 BARS_NEEDED = max(SMA_M, ENTRY_N + 1, EXIT_K + 1)
-UNIVERSE = ["btcidr", "ethidr"]   # TODO: tambah 2-3 pair likuid SEBELUM freeze
+UNIVERSE = ["btcidr", "ethidr", "adaidr"]   # TODO: tambah 2-3 pair likuid SEBELUM freeze
 
 INITIAL_CASH = 100_000_000
 MAX_POSITIONS = 4
