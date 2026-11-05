@@ -54,7 +54,7 @@ Tidak ada secret di repositori; `.env` ada di `.gitignore`.
 - Eksekusi memakai bid/ask order book dan fee taker all-in, bukan harga close.
 
 ## Backtest
-Periode: 1 Nov 2023 sampai 4 Nov 2026 (3 tahun lebih). Sumber data: history_v2 tf=240. Fee 0,41555% per sisi (beli dan jual). Spread 0,10% (0,05% per sisi) dan slippage 0,05% per sisi, asumsi konservatif untuk pair likuid karena data order book historis tidak tersedia. Backtest memakai api/_core.py yang sama dan tidak mengubah parameter di atas. Hasil dilaporkan terpisah..
+Periode: 1 Nov 2023 sampai 4 Nov 2026 (3 tahun lebih). Sumber data: history_v2 tf=240. Fee 0,41555% per sisi (beli dan jual). Spread dan slippage backtest diukur dari median snapshot order book yang dikumpulkan bot; angka dan tanggal pengukurannya dilaporkan di dashboard. Backtest memakai api/_core.py yang sama dan tidak mengubah parameter di atas. Hasil dilaporkan terpisah..
 
 ## Catatan perbaikan setelah freeze
 (kosong)
