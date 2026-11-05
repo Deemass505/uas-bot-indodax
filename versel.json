@@ -1,0 +1,3 @@
+{
+  "functions": { "api/tick.py": { "maxDuration": 60 } }
+}
