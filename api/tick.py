@@ -23,7 +23,7 @@ def http_json(url, data=None, headers=None, tries=3, timeout=10, throttle=True):
                 if wait > 0:
                     time.sleep(wait)
                 _last_req[0] = time.time()
-                        hdrs = {
+            hdrs = {
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
                 "Accept": "application/json, text/plain, */*",
             }
