@@ -23,8 +23,12 @@ def http_json(url, data=None, headers=None, tries=3, timeout=10, throttle=True):
                 if wait > 0:
                     time.sleep(wait)
                 _last_req[0] = time.time()
-            req = urllib.request.Request(
-                url, data=data, headers=headers or {"User-Agent": "uas-bot/1.0"})
+                        hdrs = {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+                "Accept": "application/json, text/plain, */*",
+            }
+            hdrs.update(headers or {})
+            req = urllib.request.Request(url, data=data, headers=hdrs)
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 body = r.read().decode()
             if not body.strip():
