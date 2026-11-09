@@ -57,4 +57,4 @@ Tidak ada secret di repositori; `.env` ada di `.gitignore`.
 Periode: 1 Nov 2023 sampai 4 Nov 2026 (3 tahun lebih). Sumber data: history_v2 tf=240. Fee 0,41555% per sisi (beli dan jual). Spread 0,10% (0,05% per sisi) dan slippage 0,05% per sisi adalah asumsi sementara karena snapshot order book belum cukup untuk pengukuran. Angka ini akan diganti dengan median hasil pengukuran dari snapshot yang dicatat bot (10 level bid/ask), dan penggantiannya dicatat di bagian "Catatan perbaikan setelah freeze". Backtest memakai api/_core.py yang sama dan tidak mengubah parameter di atas. Hasil dilaporkan terpisah..
 
 ## Catatan perbaikan setelah freeze
-FEE_TAKER disesuaikan ke 0.0041555, cron-job.org ditambahkan karena GitHub Actions berjalan sekitar sejam sekali, dan jendela forward test berakhir sesuai tenggat 14 Nov.
+FEE_TAKER disesuaikan ke 0.0041555, cron-job.org ditambahkan karena GitHub Actions berjalan sekitar sejam sekali, (gangguan 7 Nov 22.00 WIB sampai 9 Nov 19.00 WIB, 161 error 403, perbaikan header dan --fail-with-body, pemicu dipindah ke cron-job.org, strategi tidak diubah)
