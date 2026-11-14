@@ -1,0 +1,19 @@
+{
+ "return_total_pct": 0.0,
+ "max_drawdown_pct": 0.0,
+ "equity_akhir": 100000000.0,
+ "jumlah_trade": 0,
+ "posisi_masih_terbuka": [],
+ "win_rate_pct": null,
+ "rata2_untung": null,
+ "rata2_rugi": null,
+ "profit_factor": null,
+ "porsi_biaya": null,
+ "total_fee": 0,
+ "total_spread_slippage": 0,
+ "buy_hold_btc_pct": -13.05687099885995,
+ "bar_dilewati_data_tidak_valid": 0,
+ "buy_diblok_loss_limit": 0,
+ "buy_diblok_maks_posisi": 0,
+ "buy_diblok_min_order": 0
+}
