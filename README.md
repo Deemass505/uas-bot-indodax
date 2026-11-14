@@ -57,8 +57,7 @@ Tidak ada secret di repositori; `.env` ada di `.gitignore`.
 Periode: 1 Nov 2023 sampai 4 Nov 2026 (3 tahun lebih). Sumber data: history_v2 tf=240. Fee 0,41555% per sisi (beli dan jual). Spread 0,10% (0,05% per sisi) dan slippage 0,05% per sisi adalah asumsi sementara karena snapshot order book belum cukup untuk pengukuran. Angka ini akan diganti dengan median hasil pengukuran dari snapshot yang dicatat bot (10 level bid/ask), dan penggantiannya dicatat di bagian "Catatan perbaikan setelah freeze". Backtest memakai api/_core.py yang sama dan tidak mengubah parameter di atas. Hasil dilaporkan terpisah..
 
 ## Catatan perbaikan setelah freeze
-7 Nov 2026 22.00 s.d. 9 Nov 2026 18.48 WIB: panggilan dari fungsi Vercel ke Indodax gagal dengan HTTP 403 (172 error di log). Setelah perbaikan, bot pulih pukul 18.48 WIB.
-Perbaikan: wilayah fungsi Vercel dipindah. Aturan, parameter, dan universe tidak berubah.
-FEE_TAKER disesuaikan ke 0.0041555 agar sama dengan README; penjadwal kedua cron-job.org ditambahkan karena GitHub Actions berjalan sekitar sejam sekali.
+7 Nov 2026 22.00 s.d. 9 Nov 2026 18.48 WIB: panggilan dari fungsi Vercel ke Indodax gagal dengan HTTP 403 (172 error di log). Perbaikan pada 9 Nov 2026: dua commit Update tick.py (commit akhir 019a425) yang hanya mengubah header HTTP pada http_json (User-Agent dan Accept) dan satu indentasi. Wilayah fungsi Vercel juga dipindah. Aturan strategi, parameter, universe, fee, sizing, dan risk management tidak berubah (_core.py tidak berubah sejak freeze).
+FEE_TAKER disesuaikan ke 0.0041555 agar sama dengan README; penjadwal kedua cron-job.org ditambahkan.
 Jendela forward test: 5 Nov 2026 12.00 s.d. 13 Nov 2026 21.00 WIB (batas log yang diekspor). Uptime = slot 30 menit dengan minimal satu panggilan selesai.
 Ditambahkan: ekspor_log.py, hitung_ulang.py, buat_dashboard.py, dan berkas hasil.
